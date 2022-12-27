@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Noto+Sans+JP:wght@300;900&display=swap');
+
+body {
+  margin: 0rem;
+  background-color: rgb(36 34 34);
+  font-size: 16px;
+}
+
+a {
+  color: #fff;
+}
+
+/* -----------------------------------------
+ * UTILITIES
+/* -----------------------------------------*/
+
+.u-bold_and_underlined_words {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.u-text-center {
+  text-align:center;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------
+ * HEADER
+/* -----------------------------------------*/
+
+.header {
+  display: block;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+.header-navbar-pic {
+  display: block;
+  width: 64px;
+  margin-left: 10px;
+}
+
+.header-navbar-brand {
+  margin: 20px 10px;
+  margin-right: auto;
+}
+
+.header-navbar-brand-author {
+  font-weight: 900;
+  color: white;
+  font-size: 2rem;
+}
+
+.header-navbar-brand-sub {
+  color: white;
+  font-weight:500;
+}
+
+.header-navbar-item {
+  position: relative;
+  font-size: 1rem;
+  color: white;
+}
+
+.header-navbar-item-link {
+  display: inline-block;
+  margin: 20px 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-navbar-item:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    position: fixed;
+    width: 920px;
+  }
+
+  .header-navbar {
+    flex-direction: row;
+  }
+
+  .header-navbar-author {
+    font-size: 2rem;
+  }
+
+  .header-navbar-item {
+    display: inline-block;
+    margin: 20px 10px;
+    text-decoration: none;
+  }
+}
+
+/* -----------------------------------------
+ * BANNER
+/* -----------------------------------------*/
+
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: url("img/banner.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 80vh;
+  padding-top: 10vh;
+  z-index: 1;
+}
+
+.banner-welcome {
+  width: 40%;
+  position: right;
+  align-self: flex-end;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Great Vibes", sans-serif;
+}
+
+@media screen and (min-width: 800px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .banner-welcome {
+    position: right;
+  }
+}
+
+/* -----------------------------------------
+ * SPACER
+/* -----------------------------------------*/
+
+.spacer_img {
+  height: 5rem;
+  width: 100%;
+  background: url("img/space.gif");
+  background-repeat: round no-repeat;
+  margin-top:15px;
+  margin-bottom:20px;
+}
+
+/* -----------------------------------------
+ * SECTION
+/* -----------------------------------------*/
+
+.section {
+  color: white;
+  background-color: black;
+  padding: 1rem;
+}
+.section h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: black;
+  font-family: "Great Vibes", sans-serif;
+}
+.section h1::before, .section h1::after {
+  display: block;
+  content: '';
+  background-image: url(img/floating.gif);
+  width: 40px;
+  height: 30px;
+  background-size: cover;
+}
+
+.section p {
+  border-radius: 10px;
+  font-size: 1rem;
+  margin: 0rem;
+  white-space: pre-wrap;
+}
+
+/* -----------------------------------------
+ * PROJECTS
+/* -----------------------------------------*/
+
+.projects {
+  color: white;
+  border-radius: 10px;
+  padding: 1rem 1rem 1rem 2rem;
+  font-size: 1rem;
+  background-color: black;
+  margin: 0rem;
+  align-self: stretch;
+  flex: 2;
+  list-style-type: none;
+}
+
+.projects-item {
+  display:flex;
+  margin-bottom:20px;
+}
+
+.projects-item-pics-img {
+  max-width: 300px;
+  margin-right:10px;
+}
+
+.projects-item-content {
+  white-space: pre-wrap;
+}
+
+/* -----------------------------------------
+ * FOOTER
+/* -----------------------------------------*/
+
+footer {
+  color: white;
+  border: solid 5px white;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: black;
+}
