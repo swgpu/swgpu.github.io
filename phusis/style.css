@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: normal;
+  src: url(fonts/LibreBaskerville-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: bold;
+  src: url(fonts/LibreBaskerville-Bold.ttf) format("truetype");
+}
+
+* {
+  color: #2D2D2D;
+  font-family: 'Libre Baskerville';
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+pre {
+  background: #333;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, table, th, td, caption, hr {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+input, select {
+  height: 24px;
+  display: block;
+  width:100%;
+  padding: 1px 2px;
+}
+
+.img {
+  display: block;
+  width:100%;
+}
+
+.btn {
+  background-color: #F65485;
+  color: white;
+  border: none;
+  padding: 0.33rem 1rem;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn--big {
+  font-size: 1.5rem;
+}
+.btn:hover {
+  background-color: #dd4c78;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* CONTAINER
+/*---------------------------------------------------------------------------------------------*/
+.container {
+  max-width: 1050px;
+  height: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* FORMULA
+/*---------------------------------------------------------------------------------------------*/
+.formula {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* HEADER
+/*---------------------------------------------------------------------------------------------*/
+.header {
+  background-color: #F65485;
+  color: #fff;
+  margin-bottom: 56px;
+}
+.header-title {
+  color: #FFF;
+  text-align:center;
+  line-height: 76px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* COURSE
+/*---------------------------------------------------------------------------------------------*/
+.course {
+  padding-bottom: 24px;
+}
+.course-title {
+  display: inline-block;
+  font-size: 26px;
+  color: #F65485;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}

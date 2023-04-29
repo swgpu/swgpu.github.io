@@ -2,8 +2,12 @@
 
 body {
   margin: 0rem;
-  background-color: rgb(36 34 34);
+  background-color: #122718;
   font-size: 16px;
+
+  background-image: url('/img/bg.jpg');
+  background-size:cover;
+  background-attachment: fixed;
 }
 
 a {
@@ -83,7 +87,7 @@ a {
 
 @media screen and (min-width: 800px) {
   .header {
-    position: fixed;
+    /* position: fixed; */
     width: 920px;
   }
 
@@ -117,16 +121,16 @@ a {
   height: 80vh;
   padding-top: 10vh;
   z-index: 1;
+  margin-bottom:2rem;
 }
 
 .banner-welcome {
-  width: 40%;
-  position: right;
-  align-self: flex-end;
+  width: 100%;
   color: white;
   text-align: center;
   font-size: 4rem;
   font-family: "Great Vibes", sans-serif;
+  text-shadow: 5px 5px 5px #000000;
 }
 
 @media screen and (min-width: 800px) {
@@ -158,10 +162,12 @@ a {
 
 .section {
   color: white;
-  background-color: black;
+  background-color: #00360b;
   padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
 }
-.section h1 {
+.section-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,9 +177,11 @@ a {
   text-align: center;
   font-size: 2rem;
   background-color: black;
-  font-family: "Great Vibes", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
 }
-.section h1::before, .section h1::after {
+
+.section-title::before, .section-title::after {
   display: block;
   content: '';
   background-image: url(img/floating.gif);
@@ -192,23 +200,6 @@ a {
 /* -----------------------------------------
  * PROJECTS
 /* -----------------------------------------*/
-
-.projects {
-  color: white;
-  border-radius: 10px;
-  padding: 1rem 1rem 1rem 2rem;
-  font-size: 1rem;
-  background-color: black;
-  margin: 0rem;
-  align-self: stretch;
-  flex: 2;
-  list-style-type: none;
-}
-
-.projects-item {
-  display:flex;
-  margin-bottom:20px;
-}
 
 .projects-item-pics {
   display:flex;
@@ -234,7 +225,8 @@ a {
 }
 
 .projects-item-content-desc {
-  white-space: pre-line;
+  margin-bottom:1rem;
+
 }
 /* -----------------------------------------
  * FOOTER
