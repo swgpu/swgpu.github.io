@@ -2,95 +2,38 @@
 <html lang="fr">
 
 <head>
-  <title>Portfolio | Jay19240</title>
-  <meta charset="utf-8">
-  <link rel="icon" href="img/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="styles/core.css" />
+  <link rel="stylesheet" type="text/css" href="styles/game.css" />
+  <link rel="stylesheet" type="text/css" href="samples/checker/styles.css" />
+  <link rel="stylesheet" type="text/css" href="samples/ccg/styles.css" />
+  <link rel="stylesheet" type="text/css" href="samples/rpg/styles.css" />
+  
+  <title>Haiku Playground</title>
+  <style>
+    h1 {
+      margin-bottom:10px;
+    }
+    center {
+      margin-bottom:10px;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index.a3c66c6a.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <header class="header">
-      <nav class="header-navbar">
-        <img src="img/pic.png" class="header-navbar-pic"/>
-        <div class="header-navbar-brand">
-          <div class="header-navbar-brand-author">JAY19240</div>
-          <div class="header-navbar-brand-sub">Enfant de la matrice depuis 1989</div>
-        </div>
-        <div class="header-navbar-item"><a class="header-navbar-item-link" href="#">Blog</a></div>
-        <div class="header-navbar-item"><a class="header-navbar-item-link" href="#">Photographies</a></div>
-        <div class="header-navbar-item"><a class="header-navbar-item-link" href="#">Musiques</a></div>
-        <div class="header-navbar-item"><a class="header-navbar-item-link" href="#contact">Contact</a></div>
-    </header>
-  </div>
-
-  <div class="container">
-    <div class="banner">
-      <div class="banner-welcome">Bienvenue</div>
-    </div>
-
-    <section class="section">
-      <h1 class="section-title">Intro</h1>
-      <div class="spacer_img" id="presentation"></div>
-      <p>
-Bonjour et bienvenue, je suis très heureux de vous accueillir dans ce petit espace de l'internet qui me présente ainsi que toutes mes réalisations personnelles en tant que passionné d'informatique.
-
-Je me nomme Julien alias Jay19240 naît en 1989.
-Je suis passionné d'informatique depuis très longtemps, celà remonte à l'aquisition de notre première machine familiale, j'étais alors agé de seulement douze ans. C'était les années 2000, l'époque magnifique du téléchargement peer-to-peer, msn, skyblog, les débuts du jeux en ligne (unreal, quake, cs), le xbox-live, les chats opérateurs, irc. En bref l'epoque de Matrix, Scream, du 3310, des crédits sms, des connexions 1024Ko ou 2048Ko pour ceux qui avait le plus de chances, des j-rpg d'une beauté inégalé, du magazine Gameplay RPG,
-des matchs de clans, game-one, level-one, la french-connexion et j'en passe !
-
-C'est dans cette culture là que j'ai grandis et je dois dire que celà fait partie des plus beaux souvenirs de ma vie.
-Ne vous méprennez pas, je n'ai pas vécu dans le virtuel pour combler un manque dans la vie réel, j'avais des amis proches en irl également. Simplement de retour chez moi le virtuel me hapé tel une deuxième vie ou tout était possible et surtout plus à ma convenance.
-
-Se retrouver tous les soirs pendant de longues heures à jouer et surtout discuter, celà créer forcément des relations particulièrement fortes.
-J'ai noué des amitiés de jeunesses extrèmement puissantes bien que je ne les ai pour certaines jamais vu; il en est de même avec mes premières relations amoureuses d'ailleurs. Quoiqu'il en soit, que j'ai vu ou non ces personnes importe peu car je me souviens de chacunes d'elles avec la même intensité.
-
-C'est pendant toutes ces années que ma monté en puissance technique c'est faites progressivement en parallèle de celà avec en toile de fond une fascination presque hypnotique pour cet outil.
-      </p>
-    </section>
-
-    <section class="section">
-      <a href="https://github.com/jay19240/WebStationX" class="section-title">WebStationX</a>
-      <div class="projects-item-content">
-        <div class="projects-item-content-desc">
-WebStationX est mon oeuvre principale, il s'agit d'un moteur de jeux vidéos 2D/3D basé sur WebGPU.
-L'idée est simple, fournir un kit de developpement complet et cohérent allant de l'interface utilisateur jusqu'au rendu le tout dans les langages natifs du web.
-A l'inverse de la mode actuelle, WebStationX est conçu pour être un moteur qui mise sur des techniques simples et pragmatiques, le but ici est d'éliminer le plus
-de boites noires possible.
-A noter que ce projet est livré avec une douzaine d'exemples divers et variés.
-        </div>
-      </div>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/1gNDMe9ymwc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
-
-    <section class="section">
-      <a href="https://natureellebeaute.fr/" class="section-title">Ineb</a>
-      <div class="projects-item-content">
-        <div class="projects-item-content-desc">
-Le site internet du salon de beauté appartenant à ma mère. 
-C'est un SSR sur NodeJS qui utilise Express et MongoDB avec un système de réservation en ligne (actuellement désactivé).
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <a href="phusis/index.html" class="section-title">Phusis</a>
-      <div class="projects-item-content">
-        <div class="projects-item-content-desc">
-Phusis n'est pas un projet de développement au sens propre.
-Il s'agit plutôt d'une histoire numérique destiné aux enfants qui souhaite apprendre l'origine des mathématiques.
-        </div>
-      </div>
-    </section>
-
-    <section class="section u-text-center">
-      <h1 class="section-title">Outro</h1>
-      <p>Vous pouvez me contacter par mail.<br><a href="mailto:julien.rog24@gmail.com">julien.rog24_at_gmail.com</a>
-      </p>
-    </section>
+  <center>
+    <h1>Playground</h1>
+    <span>time: <span id="time"></span>
+    <br/>
+    <span>fps: <span id="fps"></span>
+  </center>
+  <div id="APP" style="margin: 0 auto">
+    <div id="APP_FAIL"></div>
+    <canvas id="CANVAS_3D" width="1px" height="1px"></canvas>
+    <canvas id="CANVAS_2D" width="1px" height="1px"></canvas>
+    <div id="UI_ROOT"></div>
+    <div id="UI_FADELAYER"></div>
+    <div id="UI_OVERLAYER"></div>
   </div>
 </body>
 
