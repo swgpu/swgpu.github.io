@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Noto+Sans+JP:wght@300;900&display=swap');
+
+body {
+  margin: 0rem;
+  background-color: #122718;
+  font-size: 16px;
+  background-image: url('/me/img/bg.jpg');
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+a {
+  color: #fff;
+}
+
+/* -----------------------------------------
+ * UTILITIES
+/* -----------------------------------------*/
+
+.u-bold_and_underlined_words {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.u-text-center {
+  text-align:center;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------
+ * HEADER
+/* -----------------------------------------*/
+
+.header {
+  display: block;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+.header-navbar-pic {
+  display: block;
+  height: 220px;
+  margin-left: 10px;
+}
+
+.header-navbar-brand {
+  margin: 20px 10px;
+  margin-right: auto;
+}
+
+.header-navbar-brand-author {
+  font-weight: 900;
+  color: white;
+  font-size: 2rem;
+}
+
+.header-navbar-brand-sub {
+  color: white;
+  font-weight:500;
+}
+
+.header-navbar-item {
+  position: relative;
+  font-size: 1rem;
+  color: white;
+}
+
+.header-navbar-item-link {
+  display: inline-block;
+  margin: 20px 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+@media screen and (min-width: 800px) {
+  .header {
+    /* position: fixed; */
+    width: 920px;
+  }
+
+  .header-navbar {
+    flex-direction: row;
+  }
+
+  .header-navbar-author {
+    font-size: 2rem;
+  }
+
+  .header-navbar-item {
+    display: inline-block;
+    margin: 20px 10px;
+    text-decoration: none;
+  }
+}
+
+/* -----------------------------------------
+ * BANNER
+/* -----------------------------------------*/
+
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: url("img/banner.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 80vh;
+  padding-top: 10vh;
+  z-index: 1;
+  margin-bottom:2rem;
+}
+
+.banner-welcome {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Great Vibes", sans-serif;
+  text-shadow: 5px 5px 5px #000000;
+}
+
+@media screen and (min-width: 800px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .banner-welcome {
+    position: right;
+  }
+}
+
+/* -----------------------------------------
+ * SPACER
+/* -----------------------------------------*/
+
+.spacer_img {
+  height: 5rem;
+  width: 100%;
+  background: url("img/space.gif");
+  background-repeat: round no-repeat;
+  margin-top:15px;
+  margin-bottom:20px;
+}
+
+/* -----------------------------------------
+ * SECTION
+/* -----------------------------------------*/
+
+.section {
+  color: white;
+  background-color: #822dafe3;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section-title::before, .section-title::after {
+  display: block;
+  content: '';
+  background-image: url(img/floating.gif);
+  width: 40px;
+  height: 30px;
+  background-size: cover;
+}
+
+.section p {
+  border-radius: 10px;
+  margin: 0rem;
+  white-space: pre-wrap;
+}
+
+.section-sign {
+  display: block;
+  text-align: right;
+  font-style: italic;
+}
+/* -----------------------------------------
+ * PROJECTS
+/* -----------------------------------------*/
+
+.projects-item-pics {
+  display:flex;
+  flex-wrap: wrap;
+  margin-left:auto;
+  width:50%;
+  margin-left:30px;
+}
+.projects-item-pics-img {
+  max-width: 300px;
+  width:50%;
+}
+
+.projects-item-title {
+  font-size:1rem;
+}
+
+.projects-item-content-title {
+  display: block;
+  font-size:1.5rem;
+  text-decoration:underline;
+  margin-bottom:1rem;
+}
+
+.projects-item-content-desc {
+  margin-bottom:1rem;
+
+}
+/* -----------------------------------------
+ * FOOTER
+/* -----------------------------------------*/
+
+footer {
+  color: white;
+  border: solid 5px white;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: black;
+}
