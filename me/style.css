@@ -55,8 +55,9 @@ a {
 }
 
 .header-navbar-brand {
-  margin: 20px 10px;
   margin-right: auto;
+  margin:0 auto;
+  text-align: center;
 }
 
 .header-navbar-brand-author {
