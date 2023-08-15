@@ -4,7 +4,7 @@ body {
   margin: 0rem;
   background-color: #122718;
   font-size: 16px;
-  background-image: url('/me/img/bg.jpg');
+  background-image: url('/me/img/bg.gif');
   background-size:cover;
   background-attachment: fixed;
   background-position: bottom;
@@ -69,6 +69,7 @@ a {
 .header-navbar-brand-sub {
   color: white;
   font-weight:500;
+  font-style:italic;
 }
 
 .header-navbar-item {
