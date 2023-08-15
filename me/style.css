@@ -123,6 +123,7 @@ a {
   padding-top: 10vh;
   z-index: 1;
   margin-bottom:2rem;
+  user-select: none;
 }
 
 .banner-welcome {
