@@ -4,7 +4,7 @@ body {
   margin: 0rem;
   background-color: #122718;
   font-size: 16px;
-  background-image: url('/me/img/bg.jpg');
+  background-image: url('/me/img/bg.gif');
   background-size:cover;
   background-attachment: fixed;
   background-position: bottom;
@@ -168,7 +168,6 @@ a {
   background-color: #822dafe3;
   padding: 1rem;
   margin-bottom: 2rem;
-  border-radius: 10px;
   font-size: 1.2rem;
 }
 .section-title {
