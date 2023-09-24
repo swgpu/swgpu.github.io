@@ -1,7 +1,7 @@
 # Blender 3.5.0
 # www.blender.org
 mtllib f.mtl
-o Cube.001
+o letter-f
 v -1.000000 4.530983 1.000000
 v -1.000000 6.309902 -1.000000
 v -1.000000 4.530983 -1.000000
