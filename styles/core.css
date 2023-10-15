@@ -348,6 +348,7 @@ body {
 .UIMenu {
   border: 10px solid;
   border-image: url(../textures/ui_border.png) 3 fill;
+  overflow-y: auto;
 }
 
 .UIMenu.u-focused .UIMenuItemText.u-focused {

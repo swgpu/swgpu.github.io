@@ -5,8 +5,6 @@
   "Description": "The room",
   "ScriptFile": "samples/prerendered-isometric/scene.jsc",
   "MusicFile": "samples/prerendered-isometric/scene.mp3",
-  "MapFile": "samples/prerendered-isometric/scene.jsm",
-  "MapTextureFile": "samples/prerendered-isometric/scene.png",
   "WalkmeshFile": "samples/prerendered-isometric/scene.jwm",
   "Camera": {
     "MinClipOffsetX": 0,
@@ -14,6 +12,44 @@
     "MaxClipOffsetX": 0,
     "MaxClipOffsetY": 0
   },
+  "Layers": [{
+    "JSMFile": "samples/prerendered-isometric/layer0.jsm",
+    "TextureFile": "samples/prerendered-isometric/layer0.png"
+  },{
+    "JSMFile": "samples/prerendered-isometric/layer1.jsm",
+    "TextureFile": "samples/prerendered-isometric/layer1.png"
+  }],
+  "LayerVisibles": [1, 0],
+  "LayerZones": [{
+    "LayerIndex": 1,
+    "Min": [1.040000, -4.106826],
+    "Max": [1.667614, -2.530000]
+  },
+  {
+    "LayerIndex": 1,
+    "Min": [-0.1600000, -4.099073],
+    "Max": [1.038017, -3.700000]
+  },{
+    "LayerIndex": 1,
+    "Min": [1.763832, -5.455160],
+    "Max": [2.655217, -5.169346]
+  },{
+    "LayerIndex": 1,
+    "Min": [1.676440, -2.449846],
+    "Max": [2.648888, -1.695653]
+  },{
+    "LayerIndex": 1,
+    "Min": [1.040000, -4.087681],
+    "Max": [1.686539, -2.530000]
+  },{
+    "LayerIndex": 1,
+    "Min": [3.225255, -2.309099],
+    "Max": [4.213987, -1.250337]
+  },{
+    "LayerIndex": 1,
+    "Min": [3.225256, -3.750925],
+    "Max": [4.213988, -2.692163]
+  }],
   "Controller": {
     "JASFile": "samples/prerendered-isometric/kid.jas",
     "TextureFile": "samples/prerendered-isometric/kid.png",
