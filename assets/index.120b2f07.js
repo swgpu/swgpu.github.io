@@ -164,10 +164,11 @@ fn main(
   if (MAT_PARAMS.HAS_TEXTURE == 1.0)
   {
     texel = textureSample(MAT_TEXTURE, MAT_SAMPLER, textureUV) * vec4<f32>(FragColor, 1.0);
-    if (texel.a == 0)
-    {
-      discard;
-    }
+  }
+
+  if (texel.a == 0)
+  {
+    discard;
   }
 
   if (MAT_PARAMS.HAS_DECAL == 1.0)
@@ -245,16 +246,17 @@ fn CalcFog(inputColor: vec3<f32>, inputAlpha: f32, fragPos: vec3<f32>) -> vec4<f
 // *****************************************************************************************************************
 fn CalcDecal(index: u32, fragPos: vec3<f32>) -> vec4<f32>
 {
+  var ctrlColor = vec4(1.0, 1.0, 1.0, 1.0);
   var clipPos = DECALS[index].VP_MATRIX * vec4<f32>(fragPos, 1.0);
   if (clipPos.z < -1.0 || clipPos.z > 1.0)
   {
-    return vec4(0.0, 0.0, 0.0, 0.0);
+    ctrlColor = vec4(0.0, 0.0, 0.0, 0.0);
   }
 
   var ndcPos = vec3<f32>(clipPos.xyz / clipPos.w).xy * DECALS[index].ASPECT_RATIO;
   if (ndcPos.x < -1.0 || ndcPos.x > 1.0 || ndcPos.y < -1.0 || ndcPos.y > 1.0)
   {
-    return vec4(0.0, 0.0, 0.0, 0.0);
+    ctrlColor = vec4(0.0, 0.0, 0.0, 0.0);
   }
 
   var uvx = ndcPos.x * 0.5 + 0.5;
@@ -265,7 +267,7 @@ fn CalcDecal(index: u32, fragPos: vec3<f32>) -> vec4<f32>
 
   var texColor = textureSample(DECAL_ATLAS_TEXTURE, DECAL_ATLAS_SAMPLER, vec2<f32>(uvx, uvy));
   texColor.a = max(texColor.a - (1.0 - DECALS[index].OPACITY), 0.0);
-  return texColor;
+  return texColor * ctrlColor;
 }
 
 // *****************************************************************************************************************
