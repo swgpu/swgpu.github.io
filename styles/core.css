@@ -47,6 +47,7 @@ body {
   color: #FFF;
   font-size: 10px;
   transform-origin: top left;
+  user-select: none;
 }
 
 #APP_FAIL {
