@@ -53,31 +53,25 @@
       "Name": "IDLE",
       "Frames": [
         {
-          "X": 2,
-          "Y": 182,
-          "Width": 88,
-          "Height": 88
+          "X": 3,
+          "Y": 92,
+          "Width": 87,
+          "Height": 87
         },
         {
-          "X": 92,
-          "Y": 182,
-          "Width": 88,
-          "Height": 88
+          "X": 93,
+          "Y": 92,
+          "Width": 87,
+          "Height": 87
         },
         {
-          "X": 182,
-          "Y": 182,
-          "Width": 88,
-          "Height": 88
-        },
-        {
-          "X": 272,
-          "Y": 182,
-          "Width": 88,
-          "Height": 88
+          "X": 183,
+          "Y": 92,
+          "Width": 87,
+          "Height": 87
         }
       ],
-      "FrameDuration": 100
+      "FrameDuration": 200
     },
     {
       "Name": "RUN",
