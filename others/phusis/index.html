@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PHUSIS</title>
+  <link rel="stylesheet" href="simple-grid.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nbr-table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #F65485;
+    }
+
+    .nbr-table td,
+    .nbr-table th {
+      padding: 0.33rem;
+    }
+
+    .nbr-table th {
+      color: white;
+      background-color: #F65485;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .nbr-table tr:nth-child(even) {
+      background-color: #fbbbce;
+      color: black;
+    }
+
+    .nbr-table tr:nth-child(odd) {
+      background-color: white;
+      color: black;
+    }
+
+    .nbr-table td {
+      text-align: right;
+    }
+
+    .nbrs-form {
+      margin-bottom: 1rem;
+    }
+
+    .nbrs-input {
+      padding: 0.33rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="container">
+      <h1 class="header-title">Naissance des nombres</h1>
+    </div>
+  </div>
+  <!-- HEADER -->
+
+  <!-- COURSE -->
+  <div class="course">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="course-title">Histoire</h2>
+          <div id="course-body">
+            <p>
+              Nous sommes dans les premiers âges de l'humanité en pleine période de glaciation.<br>
+              La tempète fait rage et depuis le village de Tuna une silhouette se distingue luttant contre le vent.<br>
+              C'est une femme, elle revient d'une longue mais fructueuse journée de chasse.<br>
+              Elle a sur son dos plusieurs lapins raidis par le froid et entrelaçés de cordes.<br>
+              Lucy, c'est ainsi qu'elle se nomme.<br>
+              Elle entre dans la hûte du village et pose son butin.<br>
+              Elle file se réchauffer près du feu et annonce a ses compères qu'elle à ramené "plusieurs" lapins.<br>
+              J'insiste bien sur le mot plusieurs, car aucun système de comptage n'existe alors.<br>
+              Mais bien que fatiguée, l'esprit de Lucy est vif et clair, stimulé par le froid intense.<br>
+              Elle vient de réfléchir à une chose, ne serait-il pas mieux de dire combien il y a de lapins plutôt
+              que "plusieurs" ? Ainsi ils pourraient savoir pour combien de temps ils ont à manger et pour combien de
+              personnes.<br>
+              Oui c'est une bonne idée c'est sûr, mais comment...<br>
+
+              Lucy réfléchit une nuit entière, elle pense au son qui existe dans sa langue pour dire "lapin",
+              alors pourquoi ne pas utiliser un son particulier pour chaque quantité ?<br>
+
+              Cela parait une bonne idée, puis harassée par la fatigue elle finit par s'endormir, blottie près du feu.
+              Prise dans ses songes, elle se retrouve devant une quantité incroyable de lapins,
+              tous plus dodus les uns que les autres, voilà à manger pour toute la vie - se dit-elle !
+              Puis, elle se réveille et constate que ce n'était malheureusement qu'un rêve.
+              Mais elle réalise tout à coup le nombre infini de quantité qui peut exister
+              et qu'elle n'aura jamais assez de mémoire pour retenir tous ces différents sons !
+
+              C'est alors qu'elle se place devant son butin et tente de trouver une solution avec la précédente
+              observation en tête.
+              Elle commence:
+            </p>
+            <p>
+              Elle prononce le son "How" pour une quantité vide.<br>
+              Elle continue avec le son "Hig" pour I.<br>
+              Elle décide que cela fait déjà trop de son à retenir, mais comment passer à trois ?<br>
+            </p>
+            <p>
+              C'est alors qu'elle a une idée, pourquoi ne pas utiliser plusieurs fois ces mêmes sons dans un certain
+              ordre, cela sera beaucoup plus facile à retenir.<br>
+            </p>
+            <p>
+              Elle continue avec "Hig-How" pour II.<br>
+              Puis "Hig-Hig" pour III.<br>
+              Puis "Hig-How-How" pour IIII.<br>
+              Puis "Hig-How-Hig" pour IIIII.<br>
+              Puis "Hig-Hig-How" pour IIIIII.<br>
+              Puis "Hig-Hig-Hig" pour IIIIIII.<br>
+            </p>
+            <p>
+              Ça y est, elle vient de trouver un système qui permet de compter, le premier système de numération est
+              né.<br>
+              En l'occurence il s'agit de seulement deux symboles, "How" et "Hig", on dit qu'il s'agit d'une base
+              2.<br>
+
+              Le jour se lève, tout le monde est réuni et Lucy partage sa découverte avec tous ses compères.<br>
+              L'un d'eux, un peu plus taquin que la moyenne lui demande comment dit-ont une quantité en ciblant un tas
+              de buches.<br>
+              Lucy n'avait jamais compté autant d'objets jusque-là (20), puis elle se lance et cela donne une phrase
+              très longue.<br>
+              Son ami lui fait comprendre que ce n'est pas possible pour lui de répéter le son car celui-ci est trop
+              long.<br>
+
+              Lucy doit donc encore réfléchir afin de règler ce problème.<br>
+              Elle essaie, un peu au hasard, elle doit bien l'avouer, avec plus de symbôles.<br>
+            </p>
+            <p>
+              Une nouvelle règle apparait avec quatres symboles:<br>
+              "How" pour une quantité vide,<br>
+              "Hig" pour I,<br>
+              "Laj" pour II,<br>
+              "Tra" pour III,<br>
+              "Hig-How" pour IIII,<br>
+              "Hig-Hig" pour IIIII,<br>
+              "Hig-Laj" pour IIIIII,<br>
+              "Hig-Tra" pour IIIIIII,<br>
+              *Et la boucle continue...<br>
+              "Laj-How" pour IIIIIIII,<br>
+              "Laj-Hig" pour IIIIIIIII,<br>
+              "Laj-Laj" pour IIIIIIIIII,<br>
+              "Laj-Tra" pour IIIIIIIIIII.<br>
+            </p>
+            <p>
+              Lucy remarque que son intuition était bonne en effet, plus la base est grande et plus le son est court
+              !<br>
+              Ainsi le clan s'arreta à dix symboles.<br>
+              Avant tout car nous avons dix doigts, cela rend le comptage plus simple.<br><br>
+              Et voilà la règle finale avec dix symboles:<br>
+              "Zero" pour une quantité vide,<br>
+              "Un" pour I,<br>
+              "Deux" pour II,<br>
+              "Trois" pour III,<br>
+              "Quatre" pour IIII,<br>
+              "Cinq" pour IIIII,<br>
+              "Six" pour IIIIII,<br>
+              "Sept" pour IIIIIII,<br>
+              "Huit" pour IIIIIIII,<br>
+              "Neuf" pour IIIIIIIII<br>
+              *Et la boucle continue...<br>
+              "Un-Zero" pour IIIIIIIIII,<br>
+              "Un-Un" pour IIIIIIIIIII,<br>
+              "Un-Deux" pour IIIIIIIIIIII,<br>
+              "Un-Trois" pour IIIIIIIIIIIII.<br>
+            </p>
+            <p>
+              <b>Nota Bene:</b><br>
+              Dans notre monde moderne il y a pléiade de système de numération, en voici quelques exemples:<br>
+              Le système horaire en est un par exemple, en base 60.<br>
+              La monnaie également, nous pouvons considérer que chaque type de billet / pièce est un symbole.<br>
+              En informatique il existe également une base 16 dont les symboles vont de 0 à F
+              (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F).<br>
+            </p>
+          </div>
+          <h2 class="course-title">Exercices</h2>
+          <p>
+            Trouver des feuilles autour de vous et compter les suivant le système de numération de Lucy.<br>
+            Faîtes le avec les deux systèmes, base 2 et base 4.<br>
+          </p>
+        </div>
+        <div class="col-6">
+          <table class="nbr-table">
+            <thead>
+              <tr>
+                <th>Binaire</th>
+                <th>Decimal</th>
+                <th>Headécimal</th>
+              </tr>
+            </thead>
+            <tbody id="nbr-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="right">
+          <a class="btn btn--big" href="page01.html">Suivant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- COURSE -->
+
+  <script>
+    const tbody = document.getElementById("nbr-table-body");
+    const input = document.getElementById("input-nbr");
+    const select = document.getElementById("select-base");
+    const btn = document.getElementById("btn-add");
+
+    const from = 1;
+    const to = 5;
+    const decimalNumbers = Array.from({ length: to - from + 1 }, (_, i) => from + i);
+
+    const rows = decimalNumbers.reduce((curr, x) => curr + createRow(x), '');
+    tbody.innerHTML = rows;
+
+    btn.addEventListener('click', () => {
+      const nbr = input.value;
+      const base = parseInt(select.value);
+      tbody.innerHTML += createRow(nbr, base);
+    });
+
+    function createRow(numberStr, base) {
+      const nbr = parseInt(numberStr, base);
+      return `<tr>
+  	    <td class="binary">${nbr.toString(2)}</td>
+  	    <td class="decimal">${nbr.toString(10)}</td>
+        <td class="hexa">${nbr.toString(16)}</td>
+	    </tr>`;
+    }
+  </script>
+</body>
+
+</html>

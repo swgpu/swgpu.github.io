@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html class="lc-cb-container-vi"
+  data-useragent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="edit-rsm-new.css" rel="stylesheet">
+  <style type="text/css">
+    html,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    font,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+    }
+
+    body {
+      line-height: 1;
+      background: #FFF;
+      text-align: left;
+      font-feature-settings: "liga"0;
+      -moz-font-feature-settings: "liga"off;
+      height: 100%;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    :focus {
+      outline: 0;
+    }
+
+    ins {
+      text-decoration: none;
+    }
+
+    del {
+      text-decoration: line-through;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    a img {
+      border: none;
+    }
+
+    ul,
+    li {
+      margin: 0 0 0 13px;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0 0 0 16px;
+      padding: 0 0 0 3px;
+    }
+
+    .clear {
+      clear: both;
+      height: 0;
+    }
+
+    br.clear {
+      line-height: 0;
+    }
+
+    .lowerborder {
+      margin-top: 1px;
+    }
+
+    div#document div.SECTION_CNTC,
+    div#document div.firstsection {
+      margin-top: 0;
+    }
+
+    div.name {
+      font-size: 17px;
+      line-height: inherit;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+      color: rgb(204, 20, 20);
+    }
+
+    div.name .fName {
+      color: #C33;
+    }
+
+    div.logo {
+      display: none;
+    }
+
+    div.paragraph {
+      position: relative;
+    }
+
+    div.heading {
+      clear: both;
+      font-weight: bold;
+      text-transform: none;
+      color: #666;
+    }
+
+    div.address {
+      position: relative;
+      text-align: right;
+      font-size: 0.917em;
+      line-height: 1.25em;
+      margin-top: 0;
+      padding-top: 8px;
+    }
+
+    div.address2 {
+      position: relative;
+      text-align: left;
+      font-size: 0.917em;
+      line-height: 1.25em;
+    }
+
+    span.jobtitle,
+    span.degree,
+    span.companyname,
+    span.programline,
+    span.eduYr {
+      font-weight: bold;
+    }
+
+    span.companyname_educ {
+      font-weight: normal;
+    }
+
+    span.paddedline {
+      display: block;
+      clear: both;
+    }
+
+    span.cdesc {
+      font-style: italic;
+    }
+
+    .nodisplay {
+      display: none;
+    }
+
+    div.bottomborder {
+      border-color: #C33 !important;
+      padding: 0 0 1px 0;
+    }
+
+    .table_wrapper {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    table.twocol td {
+      width: 50%;
+    }
+
+    table.skills {
+      width: 100%;
+    }
+
+    table.skills th,
+    table.skills td {
+      width: 20%;
+      text-align: center;
+    }
+
+    table.skills th {
+      text-decoration: underline;
+    }
+
+    table.skills .skillname,
+    table.skills .skillrating {
+      text-align: left;
+      width: 35%;
+    }
+
+    table.skills .skillrating {
+      width: 20%;
+    }
+
+    table.skills .skillyears,
+    table.skills .skilllast {
+      width: 19%;
+    }
+
+    table.skills .pad1 {
+      width: 5%;
+    }
+
+    table.skills .pad2,
+    table.skills .pad3 {
+      width: 1%;
+    }
+
+    div.resumeTitle,
+    div.execRsmTitle {
+      font-weight: bold;
+      text-align: center;
+      color: #666;
+    }
+
+    td.twocol_2 {
+      border-left: 1px solid #FEFDFD;
+    }
+
+    .prflPic {
+      float: right;
+    }
+
+    .prflPic img {
+      vertical-align: top;
+      width: 99px;
+      height: 128px;
+    }
+
+    .nmCntc {
+      padding: 0 15px 0 0;
+    }
+
+    .prflSection {
+      border-top: 20px solid #666;
+      padding: 15px 0 5px 0;
+      overflow: hidden;
+    }
+
+    div#document .sectionCL .paragraph {
+      margin-top: 0 !important;
+    }
+
+    .PARAGRAPH_CPFL .nmCntc {
+      margin: 0;
+      padding: 0;
+    }
+
+    .PARAGRAPH_CPFL .nmCntc div.name,
+    .PARAGRAPH_CPFL .nmCntc div.address {
+      text-align: center;
+    }
+  </style>
+  <style type="text/css"></style>
+  <style type="text/css">
+    div#document {
+      line-height: 16px;
+    }
+
+    div#document table {
+      line-height: 16px;
+    }
+
+    div#document.pagesize {
+      width: 700px;
+    }
+
+    div#document.vmargins {
+      padding-top: 27px;
+      padding-bottom: 27px;
+    }
+
+    div#document.hmargins {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    div#document .section {
+      margin-top: 4px;
+    }
+
+    div#document div.heading {
+      margin-bottom: 0px;
+    }
+
+    div#document div.paragraph {
+      margin-top: 1px;
+    }
+
+    div#document div.firstparagraph {
+      margin-top: 0;
+    }
+
+    div#document .singlecolumn,
+    div#document .maincolumn {
+      margin-left: 90px;
+    }
+
+    div#document .bottomborder {
+      border-bottom: 1px solid;
+    }
+
+    div#document div.sectiontitle {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    div#document table.skills td {
+      padding-top: 0px;
+    }
+
+    .fontsize {
+      font-size: 13px;
+    }
+
+    .fontface {
+      font-family: Trebuchet MS;
+    }
+
+    div.name {
+      font-size: 23px;
+      line-height: initial;
+    }
+
+    div.address {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
+    div.resumeTitle {
+      font-size: 40px;
+      line-height: 24px;
+    }
+
+    div#document .rtlSec {
+      margin-top: 9px;
+    }
+
+    div.execRsmTitle {
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+    span.compDescWrap {
+      margin-bottom: 0px;
+    }
+
+    .prflPic img {
+      margin: 0;
+    }
+
+    /*FIX for Re-calculating width of singlecolumn for CL*/
+
+    div#document .sectionCL .singlecolumn {
+      margin-left: 0 !important;
+      width: 100%;
+      font-size: 11px;
+    }
+
+    div.address2 {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  </style>
+
+</head>
+
+<body class="edtResFormatting LFR">
+
+  <div class="rsmHolder">
+    <div id="resumeDoc">
+      <div id="document" class="fontsize fontface vmargins hmargins linespacing pagesize">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="firstSection">
+
+          <div class="paragraph PARAGRAPH_PRFL firstparagraph"
+            style="border-color: transparent; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
+            <div class="prflSection">
+              <div class="nmCntc">
+                <div class="name">
+                  <span class="field">Julien</span><span>
+                  </span><span class="field">RONGIERE</span>
+                </div>
+                <div class="address">
+                  <div>
+                    <span class="field">2B, Chemin Des Plassoux</span><span>, </span><br>
+                    <span class="spaced field">Varetz</span><span>, </span>
+                    <span class="spaced field">19240</span><br>
+                    <span class="field">+(33)652912727</span><br>
+                    <span class="field">julien.rog24@gmail.com</span><br>
+                    <span class="field">Né le 05/12/1989</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+
+        </div>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <div class="heading bottomborder">
+            <div class="sectiontitle">Compétences</div>
+          </div>
+          <div class="paragraph firstparagraph"
+            style="margin-top:10px; margin-bottom:10px;border-color: transparent; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
+            <div class="field singlecolumn">
+              <div><strong>Développement Web: </strong></div>
+              <ul>
+                <li>Maitrise des langages web JS-ES6, TS, CSS3, HTML5 et PHP</li>
+                <li>Maitrise des architectures MVC et ECS</li>
+                <li>Connaissance et application des design-patterns principaux</li>
+                <li>Rigueur et méthodologie</li>
+                <li>Maitrise des diagrammes de classes et de données MCD et UML</li>
+                <li>Maitrise des bases de données relationnelles et non-relationnelles</li>
+              </ul>
+              <br>
+              <div><strong>Développement JV: </strong></div>
+              <ul>
+                <li>Connaissance de l'api WebGPU et WebGL</li>
+                <li>Maitrise des langages GLSL et WSGL</li>
+                <li>Spécialisation dans la manipulation graphique de bas niveau</li>
+                <li>Compétences en mathématique</li>
+                <ul>
+                  <li>Algorithmie</li>
+                  <li>Trigonométrie</li>
+                  <li>Calcul vectoriel</li>
+                  <li>Algèbre linéaire (matrice, interpolation linéaire, interpolation triangulaire)</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <div class="heading bottomborder">
+            <div class="sectiontitle">Réalisations</div>
+          </div>
+          <div class="paragraph firstparagraph" style="margin-top:10px; margin-bottom:10px;border-color: transparent; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
+            <div class="field singlecolumn">
+              <strong>Sites web</strong>
+              <ul>
+                <li>Société Sirmet</li>
+                <li>MLD</li>
+                <li>Evènement & Compagnie</li>
+                <li>Nature'elle beauté</li>
+                <li>JBesson</li>
+              </ul>
+              </br>
+
+              <strong>Application mobiles</strong>
+              <ul>
+                <li>Application aidant les personnes atteinte de cancer</li>
+                <li>Application de création/gestion de plaquette marketing utilisé en séminaire d'entreprises</li>
+              </ul>
+              </br>
+
+              <strong>Cadre pédagogique</strong>
+              <ul>
+                <li>Ecriture d'exercices HTML/CSS</li>
+                <li>Ecriture d'exercices Bootstrap</li>
+                <li>Ecriture d'exercices Javascript Vanilla</li>
+              </ul>
+              </br>
+
+              <strong>Projets JV</strong>
+              <ul>
+                <li>Haiku, un moteur de jeux vidéo 2D/3D complet basé sur WebGPU</li>
+                <li>Exemple d'un jeu d'exploration en 3D pré-calculé</li>
+                <li>Exemple d'un jeu d'exploration en 3D isométrique</li>
+                <li>Exemple d'un jeu de role tour par tour en 3D temps-réel</li>
+                <li>Exemple d'un jeu de carte à collectionner</li>
+                <li>Exemple d'un jeu de dames</li>
+                <li>Exemple d'un roman visuel</li>
+                <li>Exemple d'un jeu de combat en 2D scrolling horizontal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <div class="heading bottomborder">
+            <div class="sectiontitle">Expérience</div>
+          </div>
+          <div class="paragraph firstparagraph"
+            style="margin-top:10px; margin-bottom:10px; border-color: transparent; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
+            <div class="singlecolumn">
+              <span class="paddedline">
+                <span class="jobdates" format="%b %Y">Dec. 2020</span><span> － </span>
+                <span class="jobdates" format="%b %Y">Juillet. 2021</span>
+              </span>
+              <span class="jobline"><span class="">Développement d'application et site web:<br></span>
+                <ul>
+                  <li class="">2 applications Android et iOS.<br></li>
+                  <li class="">4 sites web crées avec Drupal 8.</li>
+                </ul>
+              </span>
+            </div>
+          </br>
+            <div class="singlecolumn">
+              <span class="paddedline">
+                <span class="jobdates" format="%b %Y">Dec. 2021</span><span> － </span>
+                <span class="jobdates" format="%b %Y">Dec. 2022</span>
+              </span>
+              <span class="jobline"><span class="">Développement site web en freelance:<br></span>
+                <ul>
+                  <li class="">Missions diverses et variées.<br></li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+
+</html>
