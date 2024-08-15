@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Module Core/UT" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v0.0.0-6037">
+<title data-rh="true">UT | SWGPU - Simple WebGPU Engine</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/Module Core/UT"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="UT | SWGPU - Simple WebGPU Engine"><meta data-rh="true" name="description" content="Constructors"><meta data-rh="true" property="og:description" content="Constructors"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/Module Core/UT"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/Module Core/UT" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/Module Core/UT" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.ecc4021b.css">
+<script src="/assets/js/runtime~main.ac8ffce2.js" defer="defer"></script>
+<script src="/assets/js/main.9e943386.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Simple WebGPU Engine" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Simple WebGPU Engine" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SWGPU</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/Intro">API</a><a href="https://jay19240.github.io/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Demonstrations<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/jay19240/SWGPU" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/Intro">Intro</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Ai/AIMinMaxLeaf">Module Ai</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/Module Core/ArrayCollection">Module Core</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/ArrayCollection">ArrayCollection</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/CoreManager">CoreManager</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/Curve">Curve</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/CurveInterpolator">CurveInterpolator</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/EventManager">EventManager</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/ObjectPool">ObjectPool</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/Quaternion">Quaternion</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/TreePartition">TreePartition</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/TreePartitionNode">TreePartitionNode</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/TweenNumber">TweenNumber</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/TweenVEC2">TweenVEC2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Core/TweenVEC3">TweenVEC3</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/Module Core/UT">UT</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Dna/DNAComponent">Module Dna</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Gfx2/Gfx2BoundingRect">Module Gfx2</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Gfx3/Gfx3BoundingBox">Module Gfx3</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Input/InputManager">Module Input</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Motion/Motion">Module Motion</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Screen/Screen">Module Screen</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Script/ScriptMachine">Module Script</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Sound/SoundManager">Module Sound</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Ui/UIBubble">Module Ui</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module Core</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">UT</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>UT</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructors">Constructors<a href="#constructors" class="hash-link" aria-label="Direct link to Constructors" title="Direct link to Constructors">​</a></h2>
+<ul>
+<li><strong>new UT</strong>(): UT</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="methods">Methods<a href="#methods" class="hash-link" aria-label="Direct link to Methods" title="Direct link to Methods">​</a></h2>
+<ul>
+<li>
+<p><em>static</em> <strong>CLAMP</strong>(value: number, min: number, max: number): number</p>
+<ul>
+<li><strong>value</strong>: The value to clamp.</li>
+<li><strong>min</strong>: The min.</li>
+<li><strong>max</strong>: The max.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_BOX_TO_BOX</strong>(min1: vec3, max1: vec3, min2: vec3, max2: vec3): boolean</p>
+<ul>
+<li><strong>min1</strong>: The min of box 1.</li>
+<li><strong>max1</strong>: The max of box 1.</li>
+<li><strong>min2</strong>: The min of box 2.</li>
+<li><strong>max2</strong>: The max of box 2.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_CIRCLE_TO_CIRCLE</strong>(c1: vec2, r1: number, c2: vec2, r2: number, outVelocity: vec2): boolean</p>
+<ul>
+<li><strong>c1</strong>: center of circle 1.</li>
+<li><strong>r1</strong>: radius of circle 1.</li>
+<li><strong>c2</strong>: center of circle 2.</li>
+<li><strong>r2</strong>: radius of circle 2.</li>
+<li><strong>outVelocity</strong>: The out elastic collision velocity.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_CYLINDER_TO_CYLINDER</strong>(c1: vec3, r1: number, h1: number, c2: vec3, r2: number, h2: number, outVelocity: vec2): boolean</p>
+<ul>
+<li><strong>c1</strong>: The center of cylinder 1.</li>
+<li><strong>r1</strong>: The radius of cylinder 1.</li>
+<li><strong>h1</strong>: The height of cylinder 1.</li>
+<li><strong>c2</strong>: The center of cylinder 2.</li>
+<li><strong>r2</strong>: The radius of cylinder 2.</li>
+<li><strong>h2</strong>: The height of cylinder 2.</li>
+<li><strong>outVelocity</strong>: The out elastic collision velocity.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_LINE_TO_LINE</strong>(p1: vec2, q1: vec2, p2: vec2, q2: vec2): boolean</p>
+<ul>
+<li><strong>p1</strong>: The start line 1.</li>
+<li><strong>q1</strong>: The end line 1.</li>
+<li><strong>p2</strong>: The start line 2.</li>
+<li><strong>q2</strong>: The end line 2.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_POINT_TO_BOX</strong>(p: vec3, min: vec3, max: vec3): boolean</p>
+<ul>
+<li><strong>p</strong>: The point.</li>
+<li><strong>min</strong>: The min point of box.</li>
+<li><strong>max</strong>: The max point of box.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_POINT_TO_RECT</strong>(p: vec2, min: vec2, max: vec2): boolean</p>
+<ul>
+<li><strong>p</strong>: The point.</li>
+<li><strong>min</strong>: The min of rect.</li>
+<li><strong>max</strong>: The max of rect.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>COLLIDE_RECT_TO_RECT</strong>(min1: vec2, max1: vec2, min2: vec2, max2: vec2): boolean</p>
+<ul>
+<li><strong>min1</strong>: The min rect 1.</li>
+<li><strong>max1</strong>: The max rect 1.</li>
+<li><strong>min2</strong>: The min rect 2.</li>
+<li><strong>max2</strong>: The max rect 2.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>DEG_TO_RAD</strong>(deg: number): number</p>
+<ul>
+<li><strong>deg</strong>: Angle in degrees.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>EASE_IN_OUT_QUAD</strong>(t: number, b: number, e: number, d: number): number</p>
+<ul>
+<li><strong>t</strong>: The time.</li>
+<li><strong>b</strong>: The begin.</li>
+<li><strong>e</strong>: The end.</li>
+<li><strong>d</strong>: The divide.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>EASE_IN_QUAD</strong>(t: number, b: number, e: number, d: number): number</p>
+<ul>
+<li><strong>t</strong>: The time.</li>
+<li><strong>b</strong>: The begin.</li>
+<li><strong>e</strong>: The end.</li>
+<li><strong>d</strong>: The divide.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>EASE_OUT_QUAD</strong>(t: number, b: number, e: number, d: number): number</p>
+<ul>
+<li><strong>t</strong>: The time.</li>
+<li><strong>b</strong>: The begin.</li>
+<li><strong>e</strong>: The end.</li>
+<li><strong>d</strong>: The divide.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>GET_RANDOM_FLOAT</strong>(min: number, max: number): number</p>
+<ul>
+<li><strong>min</strong>: The min.</li>
+<li><strong>max</strong>: The max.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>GET_RANDOM_INT</strong>(min: number, max: number): number</p>
+<ul>
+<li><strong>min</strong>: The min.</li>
+<li><strong>max</strong>: The max.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>LERP</strong>(a: number, b: number, t: number): number</p>
+<ul>
+<li><strong>a</strong>: The begin.</li>
+<li><strong>b</strong>: The end.</li>
+<li><strong>t</strong>: The time.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>LINEAR</strong>(t: number, b: number, e: number, d: number): number</p>
+<ul>
+<li><strong>t</strong>: The time.</li>
+<li><strong>b</strong>: The begin.</li>
+<li><strong>e</strong>: The end.</li>
+<li><strong>d</strong>: The divide.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>LINEAR_VEC2</strong>(t: number, b: vec2, e: vec2, d: number): vec2</p>
+<ul>
+<li><strong>t</strong>: The time.</li>
+<li><strong>b</strong>: The begin vector.</li>
+<li><strong>e</strong>: The end vector.</li>
+<li><strong>d</strong>: The divide.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>LINEAR_VEC3</strong>(t: number, b: vec3, e: vec3, d: number): vec3</p>
+<ul>
+<li><strong>t</strong>: The time.</li>
+<li><strong>b</strong>: The begin.</li>
+<li><strong>e</strong>: The end.</li>
+<li><strong>d</strong>: The divide.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_COPY</strong>(src: mat3, out: mat3): mat3</p>
+<ul>
+<li><strong>src</strong>: The source matrix.</li>
+<li><strong>out</strong>: The destination matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_CREATE</strong>(): Float32Array</p>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_IDENTITY</strong>(out: mat3): mat3</p>
+<ul>
+<li><strong>out</strong>: The identity matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_INVERT</strong>(a: mat3, out: mat3): mat3</p>
+<ul>
+<li><strong>a</strong>: The matrix.</li>
+<li><strong>out</strong>: The inverted matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_MULTIPLY</strong>(a: mat3, b: mat3, out: mat3): mat3</p>
+<ul>
+<li><strong>a</strong>: The first matrix.</li>
+<li><strong>b</strong>: The second matrix.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_MULTIPLY_BY_VEC3</strong>(a: mat3, v: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The matrix.</li>
+<li><strong>v</strong>: The vector.</li>
+<li><strong>out</strong>: The result transformed vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_PROJECTION</strong>(w: number, h: number, out: mat3): mat3</p>
+<ul>
+<li><strong>w</strong>: The width;</li>
+<li><strong>h</strong>: The height;</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_ROTATE</strong>(a: number, out: mat3): mat3</p>
+<ul>
+<li><strong>a</strong>: The angle.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_SCALE</strong>(x: number, y: number, out: mat3): mat3</p>
+<ul>
+<li><strong>x</strong>: The x-scale.</li>
+<li><strong>y</strong>: The y-scale.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_TRANSFORM</strong>(position: vec2, offset: vec2, rotation: number, scale: vec2, out: mat3): mat3</p>
+<ul>
+<li><strong>position</strong>: The position vector.</li>
+<li><strong>offset</strong>: The offset translation.</li>
+<li><strong>rotation</strong>: The rotation angle.</li>
+<li><strong>scale</strong>: The scale vector.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT3_TRANSLATE</strong>(x: number, y: number, out: mat3): mat3</p>
+<ul>
+<li><strong>x</strong>: The x-translation.</li>
+<li><strong>y</strong>: The y-translation.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_COMPUTE</strong>(matrices: mat4[]): mat4</p>
+<ul>
+<li><strong>matrices</strong>: The list of matrix to multiply.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_COPY</strong>(src: mat4, out: mat4): mat4</p>
+<ul>
+<li><strong>src</strong>: The source matrix.</li>
+<li><strong>out</strong>: The destination matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_CREATE</strong>(): Float32Array</p>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_IDENTITY</strong>(out: mat4): mat4</p>
+<ul>
+<li><strong>out</strong>: The matrix identity.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_INVERT</strong>(a: mat4, out: mat4): mat4</p>
+<ul>
+<li><strong>a</strong>: The origin matrix.</li>
+<li><strong>out</strong>: The inverted matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_LOOKAT</strong>(position: vec3, target: vec3, vertical: vec3, out: mat4): mat4</p>
+<ul>
+<li><strong>position</strong>: The position.</li>
+<li><strong>target</strong>: The target.</li>
+<li><strong>vertical</strong>: The up vector.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_MULTIPLY</strong>(a: mat4, b: mat4, out: mat4): mat4</p>
+<ul>
+<li><strong>a</strong>: The first matrix.</li>
+<li><strong>b</strong>: The second matrix.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_MULTIPLY_BY_VEC4</strong>(a: mat4, v: vec4, out: vec4): vec4</p>
+<ul>
+<li><strong>a</strong>: The matrix.</li>
+<li><strong>v</strong>: The vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_ORTHO</strong>(left: number, right: number, bottom: number, top: number, near: number, far: number, out: mat4): mat4</p>
+<ul>
+<li><strong>left</strong>: The left limit.</li>
+<li><strong>right</strong>: The right limit.</li>
+<li><strong>bottom</strong>: The bottom limit.</li>
+<li><strong>top</strong>: The top limit.</li>
+<li><strong>near</strong>: The near limit.</li>
+<li><strong>far</strong>: The far limit.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_ORTHOGRAPHIC</strong>(width: number, height: number, depth: number, out: mat4): mat4</p>
+<ul>
+<li><strong>width</strong>: The width.</li>
+<li><strong>height</strong>: The height.</li>
+<li><strong>depth</strong>: The depth.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_PERSPECTIVE</strong>(fov: number, ar: number, near: number, far: number, out: mat4): mat4</p>
+<ul>
+<li><strong>fov</strong>: The fovy angle.</li>
+<li><strong>ar</strong>: The aspect-ratio.</li>
+<li><strong>near</strong>: The near value.</li>
+<li><strong>far</strong>: The far value.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_ROTATE_X</strong>(a: number, out: mat4): mat4</p>
+<ul>
+<li><strong>a</strong>: The x-angle.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_ROTATE_Y</strong>(a: number, out: mat4): mat4</p>
+<ul>
+<li><strong>a</strong>: The y-angle.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_ROTATE_Z</strong>(a: number, out: mat4): mat4</p>
+<ul>
+<li><strong>a</strong>: The z-angle.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_SCALE</strong>(x: number, y: number, z: number, out: mat4): mat4</p>
+<ul>
+<li><strong>x</strong>: The x-scale.</li>
+<li><strong>y</strong>: The y-scale.</li>
+<li><strong>z</strong>: The z-scale.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_TRANSFORM</strong>(position: vec3, rotation: vec3, scale: vec3, quaternion: Quaternion, out: mat4): mat4</p>
+<ul>
+<li><strong>position</strong>: The position vector.</li>
+<li><strong>rotation</strong>: The rotation vector (y -&gt; x -&gt; z).</li>
+<li><strong>scale</strong>: The scale vector.</li>
+<li><strong>quaternion</strong>: The rotation quaternion.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_TRANSLATE</strong>(x: number, y: number, z: number, out: mat4): mat4</p>
+<ul>
+<li><strong>x</strong>: The x-translation.</li>
+<li><strong>y</strong>: The y-translation.</li>
+<li><strong>z</strong>: The z-translation.</li>
+<li><strong>out</strong>: The result matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>MAT4_TRANSPOSE</strong>(a: mat4, out: mat4): mat4</p>
+<ul>
+<li><strong>a</strong>: The source matrix.</li>
+<li><strong>out</strong>: The transposed matrix.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>RANDARRAY</strong>(min: number, max: number)</p>
+<ul>
+<li><strong>min</strong>: The min.</li>
+<li><strong>max</strong>: The max.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>RANGE_ARRAY</strong>(start: number, stop: number, step: number)</p>
+<ul>
+<li><strong>start</strong>: The start value.</li>
+<li><strong>stop</strong>: The stop value.</li>
+<li><strong>step</strong>: Increment step.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>RAY_BOX</strong>(origin: vec3, dir: vec3, min: vec3, max: vec3, outIntersectPoint: vec3): boolean</p>
+<ul>
+<li><strong>origin</strong>: The origin ray.</li>
+<li><strong>dir</strong>: The direction ray.</li>
+<li><strong>min</strong>: The min box.</li>
+<li><strong>max</strong>: The max box.</li>
+<li><strong>outIntersectPoint</strong>: The intersection point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>RAY_PLAN</strong>(origin: vec3, dir: vec3, a: vec3, n: vec3, culling: boolean, outIntersectPoint: vec3): boolean</p>
+<ul>
+<li><strong>origin</strong>: The origin ray.</li>
+<li><strong>dir</strong>: The direction ray.</li>
+<li><strong>a</strong>: The plan corner.</li>
+<li><strong>n</strong>: The plan normal.</li>
+<li><strong>culling</strong>: Culling enabled flag.</li>
+<li><strong>outIntersectPoint</strong>: The intersection point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>RAY_TRIANGLE</strong>(origin: vec3, dir: vec3, a: vec3, b: vec3, c: vec3, culling: boolean, outIntersectPoint: vec3): boolean</p>
+<ul>
+<li><strong>origin</strong>: The origin ray.</li>
+<li><strong>dir</strong>: The direction ray.</li>
+<li><strong>a</strong>: The first triangle point.</li>
+<li><strong>b</strong>: The second triangle point.</li>
+<li><strong>c</strong>: The third triangle point.</li>
+<li><strong>culling</strong>: Culling enabled flag.</li>
+<li><strong>outIntersectPoint</strong>: The intersection point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>SHUFFLE</strong>(arr: any[])</p>
+<ul>
+<li><strong>arr</strong>: The array to shuffle.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>SPREAD</strong>(base: number, spread: number): number</p>
+<ul>
+<li><strong>base</strong>: The origin value.</li>
+<li><strong>spread</strong>: The spread value.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>TO_FIXED_NUMBER</strong>(num: number, digits: number, base: number): number</p>
+<ul>
+<li><strong>num</strong>: The number.</li>
+<li><strong>digits</strong>: The number after float.</li>
+<li><strong>base</strong>: The numeric base.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>TRI2_POINT_INSIDE</strong>(p: vec2, a: vec2, b: vec2, c: vec2): number</p>
+<ul>
+<li><strong>p</strong>: The point.</li>
+<li><strong>a</strong>: The first triangle point.</li>
+<li><strong>b</strong>: The second triangle point.</li>
+<li><strong>c</strong>: The third triangle point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>TRI3_NORMAL</strong>(a: vec3, b: vec3, c: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first triangle point.</li>
+<li><strong>b</strong>: The second triangle point.</li>
+<li><strong>c</strong>: The third triangle point.</li>
+<li><strong>out</strong>: The normal vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>TRI3_POINT_ELEVATION</strong>(p: vec2, a: vec3, b: vec3, c: vec3): number</p>
+<ul>
+<li><strong>p</strong>: The point.</li>
+<li><strong>a</strong>: The first triangle point.</li>
+<li><strong>b</strong>: The second triangle point.</li>
+<li><strong>c</strong>: The third triangle point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>TRI3_POINT_INSIDE</strong>(p: vec3, a: vec3, b: vec3, c: vec3): boolean</p>
+<ul>
+<li><strong>p</strong>: The point.</li>
+<li><strong>a</strong>: The first triangle point.</li>
+<li><strong>b</strong>: The second triangle point.</li>
+<li><strong>c</strong>: The third triangle point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC1_COPY</strong>(src: number, out: vec1): vec1</p>
+<ul>
+<li><strong>src</strong>: Number.</li>
+<li><strong>out</strong>: Vector one.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_2D_TO_ISO</strong>(p: vec2): vec2</p>
+<ul>
+<li><strong>p</strong>: The ortho point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ADD</strong>(a: vec2, b: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ADD_SCALED</strong>(a: vec2, b: vec2, scale: number, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector to scale and add to the first.</li>
+<li><strong>scale</strong>: The scale value for second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ANGLE</strong>(a: vec2): number</p>
+<ul>
+<li><strong>a</strong>: The vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ANGLE_BETWEEN</strong>(a: vec2, b: vec2): number</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_COPY</strong>(src: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>src</strong>: The source vector.</li>
+<li><strong>out</strong>: The destination vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_CREATE</strong>(x: number, y: number): Float32Array</p>
+<ul>
+<li><strong>x</strong>: The first component.</li>
+<li><strong>y</strong>: The second component.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_CROSS</strong>(a: vec2, b: vec2): number</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_DISTANCE</strong>(a: vec2, b: vec2): number</p>
+<ul>
+<li><strong>a</strong>: The first point.</li>
+<li><strong>b</strong>: The second point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_DOT</strong>(a: vec2, b: vec2): number</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ISEQUAL</strong>(a: vec2, b: vec2): boolean</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ISO_CARDINAL_POINTS</strong>(direction: string, depth: number, width: number)</p>
+<ul>
+<li><strong>direction</strong>: The direction (FORWARD, BACKWARD, LEFT, RIGHT)</li>
+<li><strong>depth</strong>: The depth of shape.</li>
+<li><strong>width</strong>: The width of shape.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ISO_TO_2D</strong>(p: vec2): vec2</p>
+<ul>
+<li><strong>p</strong>: The iso point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ISZERO</strong>(a: vec2): boolean</p>
+<ul>
+<li><strong>a</strong>: The vector to check.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_LENGTH</strong>(a: vec2): number</p>
+<ul>
+<li><strong>a</strong>: The source vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_MULTIPLY</strong>(a: vec2, b: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_NORMALIZE</strong>(a: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The source vector.</li>
+<li><strong>out</strong>: The normalized vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_OPPOSITE</strong>(a: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The source vector.</li>
+<li><strong>out</strong>: The opposite vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ORIENTATION</strong>(p: vec2, q: vec2, r: vec2): number</p>
+<ul>
+<li><strong>p</strong>: The first point.</li>
+<li><strong>q</strong>: The second point.</li>
+<li><strong>r</strong>: The third point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_PARSE</strong>(str: string, separator: string, out: vec2): vec2</p>
+<ul>
+<li><strong>str</strong>: The string.</li>
+<li><strong>separator</strong>: The token separator between components.</li>
+<li><strong>out</strong>: The vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_PROJECTION_COS</strong>(a: vec2, b: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The projection vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_QUADRATIC_BEZIER</strong>(p0: vec2, p1: vec2, p2: vec2, t: number, out: vec2): vec2</p>
+<ul>
+<li><strong>p0</strong>: The start point.</li>
+<li><strong>p1</strong>: The inter point.</li>
+<li><strong>p2</strong>: The end point.</li>
+<li><strong>t</strong>: The time.</li>
+<li><strong>out</strong>: The result point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_ROTATE_AROUND</strong>(center: vec2, radius: number, angle: number): vec2</p>
+<ul>
+<li><strong>center</strong>: The position you want to rotate around.</li>
+<li><strong>radius</strong>: The radius relative to the center of the rotation.</li>
+<li><strong>angle</strong>: The angle rotation.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_SCALE</strong>(a: vec2, scale: number, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>scale</strong>: The scale value.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_SPREAD</strong>(base: vec2, spread: vec2): vec2</p>
+<ul>
+<li><strong>base</strong>: The base vector.</li>
+<li><strong>spread</strong>: The spread vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC2_SUBSTRACT</strong>(a: vec2, b: vec2, out: vec2): vec2</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_ADD</strong>(a: vec3, b: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_ADD_SCALED</strong>(a: vec3, b: vec3, scale: number, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector to scale and add to the first.</li>
+<li><strong>scale</strong>: The scale value for second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_COPY</strong>(src: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>src</strong>: The source vector.</li>
+<li><strong>out</strong>: The destination vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_CREATE</strong>(x: number, y: number, z: number): Float32Array</p>
+<ul>
+<li><strong>x</strong>: The first component.</li>
+<li><strong>y</strong>: The second component.</li>
+<li><strong>z</strong>: The third component.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_CROSS</strong>(a: vec3, b: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The cross vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_DISTANCE</strong>(a: vec3, b: vec3): number</p>
+<ul>
+<li><strong>a</strong>: The first point.</li>
+<li><strong>b</strong>: The second point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_DOT</strong>(a: vec3, b: vec3): number</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_ISEQUAL</strong>(a: vec3, b: vec3): boolean</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_ISZERO</strong>(a: vec3): boolean</p>
+<ul>
+<li><strong>a</strong>: The vector to check.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_LENGTH</strong>(a: vec3): number</p>
+<ul>
+<li><strong>a</strong>: The vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_MULTIPLY</strong>(a: vec3, b: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_NORMALIZE</strong>(a: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The origin vector.</li>
+<li><strong>out</strong>: The normalized vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_OPPOSITE</strong>(a: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The origin vector.</li>
+<li><strong>out</strong>: The opposite vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_PARSE</strong>(str: string, separator: string, out: vec3): vec3</p>
+<ul>
+<li><strong>str</strong>: The string.</li>
+<li><strong>separator</strong>: The token separator between components.</li>
+<li><strong>out</strong>: The vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_QUADRATIC_BEZIER</strong>(p0: vec3, p1: vec3, p2: vec3, t: number, out: vec3): vec3</p>
+<ul>
+<li><strong>p0</strong>: The start point.</li>
+<li><strong>p1</strong>: The inter point.</li>
+<li><strong>p2</strong>: The end point.</li>
+<li><strong>t</strong>: The time.</li>
+<li><strong>out</strong>: The result point.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_ROTATE_AROUND</strong>(center: vec3, radius: number, phi: number, theta: number): vec3</p>
+<ul>
+<li><strong>center</strong>: The position you want to rotate around.</li>
+<li><strong>radius</strong>: The radius relative to the center of the rotation.</li>
+<li><strong>phi</strong>: The phi angle.</li>
+<li><strong>theta</strong>: The theta angle.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_SCALE</strong>(a: vec3, scale: number, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>scale</strong>: The scale value.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_SPREAD</strong>(base: vec3, spread: vec3): vec3</p>
+<ul>
+<li><strong>base</strong>: The base vector.</li>
+<li><strong>spread</strong>: The spread vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC3_SUBSTRACT</strong>(a: vec3, b: vec3, out: vec3): vec3</p>
+<ul>
+<li><strong>a</strong>: The first vector.</li>
+<li><strong>b</strong>: The second vector.</li>
+<li><strong>out</strong>: The result vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC4_COPY</strong>(src: vec4, out: vec4): vec4</p>
+<ul>
+<li><strong>src</strong>: The source vector.</li>
+<li><strong>out</strong>: The destination vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC4_CREATE</strong>(x: number, y: number, z: number, w: number): Float32Array</p>
+<ul>
+<li><strong>x</strong>: The first component.</li>
+<li><strong>y</strong>: The second component.</li>
+<li><strong>z</strong>: The third component.</li>
+<li><strong>w</strong>: The fourth component.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC4_ISZERO</strong>(a: vec4): boolean</p>
+<ul>
+<li><strong>a</strong>: The vector to check.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>VEC4_PARSE</strong>(str: string, separator: string, out: vec4): vec4</p>
+<ul>
+<li><strong>str</strong>: The string.</li>
+<li><strong>separator</strong>: The token separator between components.</li>
+<li><strong>out</strong>: The vector.</li>
+</ul>
+</li>
+<li>
+<p><em>static</em> <strong>WAIT</strong>(ms: number): Promise</p>
+<ul>
+<li><strong>ms</strong>: Time to wait (in milliseconds).</li>
+</ul>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Module Core/UT.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Module Core/TweenVEC3"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">TweenVEC3</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Module Dna/DNAComponent"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">DNAComponent</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#constructors" class="table-of-contents__link toc-highlight">Constructors</a></li><li><a href="#methods" class="table-of-contents__link toc-highlight">Methods</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">API</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/9PcFvg5f7P" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://jay19240.github.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Demonstration<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/jay19240/SWGPU" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 SWGPU</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Module Gfx3/Gfx3View" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v0.0.0-6037">
+<title data-rh="true">Gfx3View | SWGPU - Simple WebGPU Engine</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/Module Gfx3/Gfx3View"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Gfx3View | SWGPU - Simple WebGPU Engine"><meta data-rh="true" name="description" content="A 3D view. Used to manipulate camera, viewport, projection mode, background color and more."><meta data-rh="true" property="og:description" content="A 3D view. Used to manipulate camera, viewport, projection mode, background color and more."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/Module Gfx3/Gfx3View"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/Module Gfx3/Gfx3View" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/Module Gfx3/Gfx3View" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.ecc4021b.css">
+<script src="/assets/js/runtime~main.ac8ffce2.js" defer="defer"></script>
+<script src="/assets/js/main.9e943386.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Simple WebGPU Engine" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Simple WebGPU Engine" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SWGPU</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/Intro">API</a><a href="https://jay19240.github.io/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Demonstrations<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/jay19240/SWGPU" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/Intro">Intro</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Ai/AIMinMaxLeaf">Module Ai</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Core/ArrayCollection">Module Core</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Dna/DNAComponent">Module Dna</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Gfx2/Gfx2BoundingRect">Module Gfx2</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/Module Gfx3/Gfx3BoundingBox">Module Gfx3</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3BoundingBox">Gfx3BoundingBox</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Camera">Gfx3Camera</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3CameraOrbit">Gfx3CameraOrbit</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3CameraWASD">Gfx3CameraWASD</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3DebugRenderer">Gfx3DebugRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Drawable">Gfx3Drawable</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3DynamicGroup">Gfx3DynamicGroup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Flare">Gfx3Flare</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3FlareRenderer">Gfx3FlareRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Manager">Gfx3Manager</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Material">Gfx3Material</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Mesh">Gfx3Mesh</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3MeshJAM">Gfx3MeshJAM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3MeshJSM">Gfx3MeshJSM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3MeshOBJ">Gfx3MeshOBJ</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3MeshRenderer">Gfx3MeshRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3MeshShadowRenderer">Gfx3MeshShadowRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3PPERenderer">Gfx3PPERenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Particles">Gfx3Particles</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3ParticlesRenderer">Gfx3ParticlesRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3PhysicsJNM">Gfx3PhysicsJNM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3PhysicsJWM">Gfx3PhysicsJWM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3RendererAbstract">Gfx3RendererAbstract</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Skybox">Gfx3Skybox</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3SkyboxRenderer">Gfx3SkyboxRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Sprite">Gfx3Sprite</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3SpriteJAS">Gfx3SpriteJAS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3SpriteJSS">Gfx3SpriteJSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3SpriteRenderer">Gfx3SpriteRenderer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3StaticGroup">Gfx3StaticGroup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3TextureManager">Gfx3TextureManager</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3Transformable">Gfx3Transformable</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3TreePartition">Gfx3TreePartition</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Module Gfx3/Gfx3TreePartitionMethod">Gfx3TreePartitionMethod</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/Module Gfx3/Gfx3View">Gfx3View</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Input/InputManager">Module Input</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Motion/Motion">Module Motion</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Screen/Screen">Module Screen</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Script/ScriptMachine">Module Script</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Sound/SoundManager">Module Sound</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Module Ui/UIBubble">Module Ui</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module Gfx3</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Gfx3View</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Gfx3View</h1></header>
+<p>A 3D view. Used to manipulate camera, viewport, projection mode, background color and more.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructors">Constructors<a href="#constructors" class="hash-link" aria-label="Direct link to Constructors" title="Direct link to Constructors">​</a></h2>
+<ul>
+<li><strong>new Gfx3View</strong>(): Gfx3View</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="methods">Methods<a href="#methods" class="hash-link" aria-label="Direct link to Methods" title="Direct link to Methods">​</a></h2>
+<ul>
+<li>
+<p><strong>getBgColor</strong>(): vec4<br>
+Returns the background color.</p>
+</li>
+<li>
+<p><strong>getCameraMatrix</strong>(): mat4<br>
+Returns the camera matrix.</p>
+</li>
+<li>
+<p><strong>getCameraPosition</strong>(): vec3<br>
+Returns the position of the camera.</p>
+</li>
+<li>
+<p><strong>getCameraViewMatrix</strong>(): mat4<br>
+Returns the camera view matrix (nothing else than an inverted camera matrix).</p>
+</li>
+<li>
+<p><strong>getClientScreenPosition</strong>(x: number, y: number, z: number): vec2<br>
+Returns the client screen position of a 3D point given its world coordinates.</p>
+<ul>
+<li><strong>x</strong>: The x world coordinate.</li>
+<li><strong>y</strong>: The y world coordinate.</li>
+<li><strong>z</strong>: The z world coordinate.</li>
+</ul>
+</li>
+<li>
+<p><strong>getClipMatrix</strong>(): mat4<br>
+Returns the clip matrix.</p>
+</li>
+<li>
+<p><strong>getClipOffset</strong>(): vec2<br>
+Returns the clip offset.</p>
+</li>
+<li>
+<p><strong>getClipOffsetX</strong>(): number<br>
+Returns the x-coordinate of the clip offset.</p>
+</li>
+<li>
+<p><strong>getClipOffsetY</strong>(): number<br>
+Returns the y-coordinate of the clip offset.</p>
+</li>
+<li>
+<p><strong>getOrthographicDepth</strong>(): number<br>
+Returns the orthographic depth.</p>
+</li>
+<li>
+<p><strong>getOrthographicSize</strong>(): number<br>
+Returns the orthographic size.</p>
+</li>
+<li>
+<p><strong>getPerspectiveFar</strong>(): number<br>
+Returns the far limit.</p>
+</li>
+<li>
+<p><strong>getPerspectiveFovy</strong>(): number<br>
+Returns the fovy angle (perspective eye-angle).</p>
+</li>
+<li>
+<p><strong>getPerspectiveNear</strong>(): number<br>
+Returns the near limit.</p>
+</li>
+<li>
+<p><strong>getProjectionClipMatrix</strong>(): mat4<br>
+Returns the result of multiplying the clip matrix and the projection matrix.</p>
+</li>
+<li>
+<p><strong>getProjectionMatrix</strong>(): mat4<br>
+Returns a projection matrix.</p>
+</li>
+<li>
+<p><strong>getProjectionMode</strong>(): ProjectionMode<br>
+Returns the projection mode.</p>
+</li>
+<li>
+<p><strong>getScreenNormalizedPosition</strong>(x: number, y: number, z: number): vec2<br>
+The normalized screen position of a 3D point given its world coordinates.</p>
+<ul>
+<li><strong>x</strong>: The x world coordinate.</li>
+<li><strong>y</strong>: The y world coordinate.</li>
+<li><strong>z</strong>: The z world coordinate.</li>
+</ul>
+</li>
+<li>
+<p><strong>getScreenSize</strong>(): vec2<br>
+Returns the screen size.</p>
+</li>
+<li>
+<p><strong>getViewProjectionClipMatrix</strong>(): mat4<br>
+Returns the result of multiplying the clip matrix, projection matrix, and camera view matrix together.</p>
+</li>
+<li>
+<p><strong>getViewport</strong>(): Gfx3Viewport<br>
+Returns the viewport.</p>
+</li>
+<li>
+<p><strong>getViewportClientSize</strong>(): vec2<br>
+Returns the size of the viewport in client coordinates space.</p>
+</li>
+<li>
+<p><strong>getViewportSize</strong>(): vec2<br>
+Returns the size of the viewport in pixels.</p>
+</li>
+<li>
+<p><strong>setBgColor</strong>(r: number, g: number, b: number, a: number): void<br>
+Set the background color (from 0 to 1).</p>
+<ul>
+<li><strong>r</strong>: The parameter &quot;r&quot; represents the red component.</li>
+<li><strong>g</strong>: The parameter &quot;g&quot; represents the green component.</li>
+<li><strong>b</strong>: The parameter &quot;b&quot; represents the blue component.</li>
+<li><strong>a</strong>: The parameter &quot;a&quot; represents the alpha value.</li>
+</ul>
+</li>
+<li>
+<p><strong>setCameraMatrix</strong>(cameraMatrix: mat4): void<br>
+Set the camera matrix.</p>
+<ul>
+<li><strong>cameraMatrix</strong>: The camera transformation matrix.</li>
+</ul>
+</li>
+<li>
+<p><strong>setClipOffset</strong>(x: number, y: number): void<br>
+Set the clip offset with the given x and y coordinates.</p>
+<ul>
+<li><strong>x</strong>: The X coordinate of the clip offset.</li>
+<li><strong>y</strong>: The Y coordinate of the clip offset.</li>
+</ul>
+</li>
+<li>
+<p><strong>setOrthographicDepth</strong>(orthographicDepth: number): void<br>
+Set orthographic depth.</p>
+<ul>
+<li><strong>orthographicDepth</strong>: The depth of the orthographic view.</li>
+</ul>
+</li>
+<li>
+<p><strong>setOrthographicSize</strong>(orthographicSize: number): void<br>
+Set orthographic size.</p>
+<ul>
+<li><strong>orthographicSize</strong>: Determines how much of the scene is visible within the camera&#x27;s view frustum.</li>
+</ul>
+</li>
+<li>
+<p><strong>setPerspectiveFar</strong>(perspectiveFar: number): void<br>
+Set the far limit.</p>
+<ul>
+<li><strong>perspectiveFar</strong>: The maximum distance from the camera at which objects will be rendered.</li>
+</ul>
+</li>
+<li>
+<p><strong>setPerspectiveFovy</strong>(perspectiveFovy: number): void<br>
+Set the fovy angle.</p>
+<ul>
+<li><strong>perspectiveFovy</strong>: The fovy angle.</li>
+</ul>
+</li>
+<li>
+<p><strong>setPerspectiveNear</strong>(perspectiveNear: number): void<br>
+Set the near limit.</p>
+<ul>
+<li><strong>perspectiveNear</strong>: The distance to the near clipping plane of a perspective projection.</li>
+</ul>
+</li>
+<li>
+<p><strong>setProjectionMode</strong>(projectionMode: ProjectionMode): void<br>
+Set the projection mode.</p>
+<ul>
+<li><strong>projectionMode</strong>: The projection mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>setScreenSize</strong>(width: number, height: number): void<br>
+Set the screen width and height (internal use).
+Warning: Don&#x27;t change the screen size here please, use CoreManager instead.
+It&#x27;s method is automatically updated by Gfx3Manager::$handleWindowResize.</p>
+<ul>
+<li><strong>width</strong>: The width of the screen size.</li>
+<li><strong>height</strong>: The height of the screen size.</li>
+</ul>
+</li>
+<li>
+<p><strong>setViewport</strong>(viewport: Gfx3Viewport): void<br>
+Set the viewport.</p>
+<ul>
+<li><strong>viewport</strong>: The viewport.</li>
+</ul>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Module Gfx3/Gfx3View.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Module Gfx3/Gfx3TreePartitionMethod"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Gfx3TreePartitionMethod</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Module Input/InputManager"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">InputManager</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#constructors" class="table-of-contents__link toc-highlight">Constructors</a></li><li><a href="#methods" class="table-of-contents__link toc-highlight">Methods</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">API</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/9PcFvg5f7P" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://jay19240.github.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Demonstration<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/jay19240/SWGPU" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 SWGPU</div></div></div></footer></div>
+</body>
+</html>
